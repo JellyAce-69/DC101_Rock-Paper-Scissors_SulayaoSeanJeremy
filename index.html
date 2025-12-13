@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Rock Paper Scissors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="front-page"></div>
+
+<div class="app" role="application">
+  <header>
+    <h1>Rock • Paper • Scissors</h1>
+    <div class="controls">
+      <label class="small" for="bestOf">Best of</label>
+      <select id="bestOf">
+        <option value="1">1</option>
+        <option value="3" selected>3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+      </select>
+      <button id="reset" class="btn secondary">Reset</button>
+    </div>
+  </header>
+
+  <main class="board" tabindex="0">
+    <section class="left" aria-label="game-play">
+      <div class="score" aria-hidden="false">
+        <div class="pill">
+          <h3>Player</h3>
+          <p id="playerScore">0</p>
+        </div>
+        <div class="pill">
+          <h3>Rounds</h3>
+          <p id="rounds">0</p>
+        </div>
+        <div class="pill">
+          <h3>Computer</h3>
+          <p id="compScore">0</p>
+        </div>
+      </div>
+
+      <div class="choices" role="list" aria-label="pick move">
+        <div tabindex="0" role="button" class="choice" data-move="rock" aria-label="rock">
+          <div class="emoji">👊</div>
+          <div class="label">Rock</div>
+        </div>
+        <div tabindex="0" role="button" class="choice" data-move="paper" aria-label="paper">
+          <div class="emoji">✋</div>
+          <div class="label">Paper</div>
+        </div>
+        <div tabindex="0" role="button" class="choice" data-move="scissors" aria-label="scissors">
+          <div class="emoji">✌️</div>
+          <div class="label">Scissors</div>
+        </div>
+      </div>
+
+      <div class="small">Tip: Click or press R / P / S to play</div>
+    </section>
+
+    <aside class="right" aria-label="result">
+      <div class="result-area" role="status" aria-live="polite">
+        <div class="vs">You vs Computer</div>
+        <div id="roundResult" class="round-result draw">Make your move!</div>
+
+        <div class="hand-display">
+          <div class="hand" id="playerHand">
+            <div class="emoji">❔</div>
+            <div class="meta">Your choice</div>
+          </div>
+          <div class="hand" id="compHand">
+            <div class="emoji">❔</div>
+            <div class="meta">Computer choice</div>
+          </div>
+        </div>
+
+        <div class="footer-actions">
+          <button id="autoPlay" class="btn">Auto Play</button>
+          <button id="soundBtn" class="btn secondary">Sound On</button>
+        </div>
+
+        <div class="small">First to majority wins. Best of controls top-right.</div>
+      </div>
+    </aside>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
