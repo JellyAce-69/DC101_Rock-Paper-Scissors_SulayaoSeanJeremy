@@ -23,3 +23,8 @@ Rock-Paper-Scissors is a simple interactive browser-based game where the player 
 5. Start playing by clicking on **Rock**, **Paper**, or **Scissors**.
 
 Enjoy the game! 🎉
+
+## 👨‍💻 Author
+
+**Sean (Ace)**
+Aspiring Computer Scientist | Software Engineer | Writer | Gamer 🎮
